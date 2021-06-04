@@ -33,7 +33,6 @@ public class Tabuleiro {
         int j=0;
         int k=0;
       
-        
         if(aux != posicao){// 
            aux=0;
             for(int i=0;((i<=2)&&(aux != posicao));i++){
@@ -45,8 +44,16 @@ public class Tabuleiro {
                 j=i;
             }
         }
-            
-    Tabuleiro.matriz[j][k]= marcador; 
+    if(Tabuleiro.matriz[j][k].equals("X")||Tabuleiro.matriz[j][k].equals("O")){
+        System.out.println("Posção não disponível");
+        }else{
+            Tabuleiro.matriz[j][k]= marcador; 
+        }       
+    
+    }
+    
+    public static String getPosicao(int i, int z){
+        return Tabuleiro.matriz[i][z];
     }
     
 }
