@@ -11,17 +11,18 @@ import java.util.Scanner;
 public class Jogador {
     public String nome;
     public String codigo;
+    public String letra;
     public int jogada;
     Scanner teclado;
 
 
 
-    public Jogador(String nome, String codigo) {
+    public Jogador(String nome, String codigo, String letra) {
         this.nome = nome;
         this.codigo = codigo;
+        this.letra = letra;
         this.teclado = new Scanner(System.in);
     }
-    
     
     public void setJogada(){
         //while(teclado.hasNext()){
@@ -47,5 +48,14 @@ public class Jogador {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getLetra() {
+        return letra;
+    }
+
+    public void setLetra(String letra) {
+        this.letra = letra;
+    }
+    
     
 }

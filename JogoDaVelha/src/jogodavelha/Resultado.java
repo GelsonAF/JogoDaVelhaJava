@@ -39,14 +39,14 @@ public class Resultado {
         if((Tabuleiro.matriz[0][0]+ Tabuleiro.matriz[1][1]+ Tabuleiro.matriz[2][2]).equals("XXX")){
             return "XXX";
         } 
-        if((Tabuleiro.matriz[0][0]+ Tabuleiro.matriz[1][1]+ Tabuleiro.matriz[2][2]).equals("XXX")){
+        if((Tabuleiro.matriz[0][0]+ Tabuleiro.matriz[1][1]+ Tabuleiro.matriz[2][2]).equals("OOO")){
             return "OOO";
         } 
             //diagonal 2
         if((Tabuleiro.matriz[2][0]+ Tabuleiro.matriz[1][1]+ Tabuleiro.matriz[0][2]).equals("XXX")){
             return "XXX";
         } 
-        if((Tabuleiro.matriz[2][0]+ Tabuleiro.matriz[1][1]+ Tabuleiro.matriz[0][2]).equals("XXX")){
+        if((Tabuleiro.matriz[2][0]+ Tabuleiro.matriz[1][1]+ Tabuleiro.matriz[0][2]).equals("OOO")){
             return "OOO";
         } 
         
