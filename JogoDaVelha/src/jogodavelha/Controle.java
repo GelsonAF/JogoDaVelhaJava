@@ -17,27 +17,30 @@ public class Controle {
     
     public void comecarPartida(){
         int aux = 0;
-        while(this.buscaResultado()){
+        while((this.buscaResultado()) & ((Tabuleiro.disponivel()))){
             this.exibir(aux);
             if(aux == 0){
-                aux++;
-            }else{
+            aux++;
+                }else{
                 aux--;
-            }
+                        }
         }
         Tabuleiro.exibe();
-        
+        System.out.println("Fim do Jogo!");
     }
     
     public boolean buscaResultado(){
-        if(Resultado.verificar().equals(player[0].getCodigo())){
-            System.out.println(player[0].getNome()+" Venceu!");
-            return false;
-        }
-        if(Resultado.verificar().equals(player[1].getCodigo())){
-            System.out.println(player[1].getNome()+" Venceu!");
-            return false;
-        }
+         
+            if(Resultado.verificar().equals(player[0].getCodigo())){
+                System.out.println(player[0].getNome()+" Venceu!");
+                return false;
+            }
+            if(Resultado.verificar().equals(player[1].getCodigo())){
+                System.out.println(player[1].getNome()+" Venceu!");
+                return false;
+            }
+           
+        
         return true;
     }
     

@@ -13,7 +13,7 @@ public class Resultado {
     
     public static String verificar(){ // verificar se há um vencedor
         
-        // verificar colunas
+        // verificar linha
         for(int linha=0; linha<3;linha++){
             if((Tabuleiro.matriz[linha][0]+ Tabuleiro.matriz[linha][1]+ Tabuleiro.matriz[linha][2]).equals("XXX")){
                 return "XXX";
@@ -24,14 +24,14 @@ public class Resultado {
                 return "OOO";
             }
         }
-                // verificar linhas
+                // verificar coluna
         for(int coluna=0; coluna<3;coluna++){
             if((Tabuleiro.matriz[0][coluna]+ Tabuleiro.matriz[1][coluna]+ Tabuleiro.matriz[2][coluna]).equals("XXX")){
                 return "XXX";
             }
         }
         for(int coluna=0; coluna<3;coluna++){
-            if((Tabuleiro.matriz[0][0]+ Tabuleiro.matriz[coluna][1]+ Tabuleiro.matriz[2][coluna]).equals("OOO")){
+            if((Tabuleiro.matriz[0][coluna]+ Tabuleiro.matriz[1][coluna]+ Tabuleiro.matriz[2][coluna]).equals("OOO")){
                 return "OOO";
             }
         }
@@ -53,20 +53,7 @@ public class Resultado {
         return "0";
     }
     
-    public static int conferir(String verificar){
-        switch(verificar){
-            case "XXX":
-                System.out.println("Player1 Ganhou!");
-                break;
-            case "OOO":
-                System.out.println("Player2 Ganhou!");
-                break;
-            default:
-                
-        }
-        return 0;
-    }
-    
+ 
     
     //Getter e Setter
 

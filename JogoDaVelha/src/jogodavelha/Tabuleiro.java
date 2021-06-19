@@ -6,7 +6,6 @@ public class Tabuleiro {
     
  public static String[][] matriz = {{"1","2","3"},{"4","5","6"},{"7","8","9"}};
     
-    
     public static void exibe(){
         int x = 0;
         for(int i=0; i<=2; i++){
@@ -63,7 +62,7 @@ public class Tabuleiro {
         
         for(int i = 0; i<=2; i++){
             for(int z=0; z<=2; z++){
-                if(!(Tabuleiro.matriz[i][z].equals("X")) || !(Tabuleiro.matriz[i][z].equals("O"))){
+                if(!(Tabuleiro.matriz[i][z].equals("X")) & !(Tabuleiro.matriz[i][z].equals("O"))){
                     return true;
                 }
             }
